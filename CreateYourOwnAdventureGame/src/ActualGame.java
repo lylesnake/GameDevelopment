@@ -5,12 +5,11 @@ public class ActualGame {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in); 
+		
+		String username;
+		username = GreetUserAndGetName();
 
-		System.out.print("Welcome to the Choose Your Own Adventure Game!\n");
-
-		System.out.println("What is your name? "); 
-		String username = input.nextLine();
-		System.out.println("Hello " + username +"!");
+		
 
 
 		System.out.println("This is a game where you will control your own destiny. \nWould like to play as (A) an ASSASSIN, (B) a MAGICIAN, or (C) a WARRIOR?");
@@ -475,5 +474,18 @@ public class ActualGame {
 			System.out.println("You run out of the room, yelling \"NOPE! NOPE! NOPE!\" never to be seen again. ");
 			System.exit(0);
 		}	
+	}
+
+	private static String GreetUserAndGetName() {
+		System.out.print("Welcome to the Choose Your Own Adventure Game!\n");
+		
+		Scanner input = new Scanner(System.in); 
+
+		System.out.println("What is your name? "); 
+		String username = input.nextLine();
+		System.out.println("Hello " + username +"!");
+		
+		return username;
+		
 	}
 }
