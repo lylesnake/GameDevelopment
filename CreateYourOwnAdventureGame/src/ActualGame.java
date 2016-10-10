@@ -5,9 +5,9 @@ public class ActualGame {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in); 
-		
+
 		String username;
-		GreetUserAndGetName(); 
+		username = GreetUserAndGetName(); 
 
 
 		System.out.println("This is a game where you will control your own destiny. "
@@ -15,246 +15,39 @@ public class ActualGame {
 		String characterType = input.nextLine(); 
 
 		if (characterType.equalsIgnoreCase("a")) {
-			customMethodJordan();
+			customMethodJordan(username);
 
 		}		
 
 		else if (characterType.equalsIgnoreCase("b")) {
-			customMethodKendall(); 
+			customMethodKendall(username); 
 		}
 
 		else if (characterType.equalsIgnoreCase("c")) {
-			customMethodTaylor(); 
-				
+			customMethodTaylor(username); 
+
 		}
 
 		else {
 			System.out.println("You run out of the room, yelling \"NOPE! NOPE! NOPE!\" never to be seen again. ");
 			System.exit(0);
 		}	
-	
+
 	}
-	
+
 	private static String GreetUserAndGetName() {
 		System.out.print("Welcome to the Choose Your Own Adventure Game!\n");
-		
+
 		Scanner input = new Scanner(System.in); 
 
 		System.out.println("What is your name? "); 
 		String username = input.nextLine();
 		System.out.println("Hello " + username +"!");
-		
+
 		return username;
 	}
-	
-	
-	private static void customMethodJordan() {
-		Scanner input = new Scanner(System.in);
-			System.out.println("You chose to play as an ASSASSIN! \nLet me introduce you to my friend JORDAN."
-					+ "\nJORDAN is a master assassin who will lead you on your adventure.\n");
 
-			System.out.println("JORDAN saunters out from the shadows and shakes your hand."
-					+ "\n\"Hello, " + username + ", \" JORDAN says to you, \"Let's begin training. First, you will need a weapon.\" "
-					+ "\nJORDAN reaches into a knapsack on their back and hands you a beautiful ebony DAGGER and a CLOAK."
-					+ "\n\"Here is a DAGGER. This is the weapon of the ASSASSIN. The CLOAK will hide you as you stalk your enemies.\"\n ");
-
-			System.out.println("Choose a response for JORDAN: "
-					+ "\n(A) Thank you for the equipment. What is our mission?"
-					+ "\n(B) Why do I need this stuff? What's going on?"
-					+ "\n(C) Say nothing. ");
-			String dialogue1 = input.nextLine();
-
-			if (dialogue1.equalsIgnoreCase("a")) { 
-				System.out.println("\"Thank you for the equipment, \" you say, \"What's our mission?\" ");
-				System.out.println("JORDAN smiles at you and says, ");
-			}
-
-			else if (dialogue1.equalsIgnoreCase("b")){
-				System.out.println("You look at the equipment in your arms, very confused. "
-						+ "\n\"Why do I need this stuff?\" you ask, \"What's going on?\"\n ");
-				System.out.println("\"Not even a thank you?\" JORDAN asks. ");
-			}
-
-			else if (dialogue1.equalsIgnoreCase("c")) {
-				System.out.println("You look at the equipment in your arms and look back up at JORDAN, saying nothing." );
-				System.out.println("\"You're a quiet one, eh?\" JORDAN says to you. ");
-			}
-
-			else {
-				System.out.println("You take the dagger and stab JORDAN, killing them instantly. Next, you turn on ME!?!? OH NO--");
-				System.exit(0);
-			}
-			System.out.print("\"I will be training you to help save our planet from the invasion of the INFERNONS,\" JORDAN explains. "
-					+ "\n\"You have been chosen because you seem to have a special aptitude for mischief.\"\n"
-					+ "\nJORDAN brings a dummy out of a nearby closet. "
-					+ "\n\"It's time to train,\" they say. They crouch down, out of sight of the target, creep slowly behind the dummy, and slit its throat."
-					+ "\n\"This is called the STALK ATTACK. You can do it by pressing X on your keyboard. Try it out!\""
-					+ "\n[Press X]\n");
-			String stalk_attack1 = input.nextLine(); 
-			if (stalk_attack1.equalsIgnoreCase("x")) {
-				double chance1 = Math.random() * 11; 
-				if (chance1 > 5) {
-					System.out.println("You crouch down and slowly approach the dummy. When you're sure the target cannot see you, you jump up and slit its throat."
-							+ "\n\"Great job!\" JORDAN crongratulates you. ");
-				}
-
-				else {
-					System.out.println("You crouch down and walk towards your enemy. You jump up, but it's too soon. "
-							+ "\n\"Stop!\" JORDAN interrupts you. \"You've been seen and, consequently, killed by guards. Be slower and quieter next time.\"");
-				}
-			}
-
-			else {
-				System.out.println("You run out of the room, yelling \"NOPE! NOPE! NOPE!\" never to be seen again. ");
-				System.exit(0);
-			}
-
-			System.out.println("\"Next, I will show you how to HIDE,\" JORDAN says, \"Simply wear your CLOAK and hide somewhere. "
-					+ "\nIf you're eavesdropping, make sure you remember what you hear.\""
-					+ "\nJORDAN puts on their cloak and steps back out of your sight, into the shadows. "
-					+ "\nYou can see them, of course, but only because you know they're there."
-					+ "\n\"Press Z to put on your cloak and hide,\" JORDAN instructs. "
-					+ "\n[Press Z]");
-			String hide1 = input.nextLine(); 
-			if (hide1.equalsIgnoreCase("z")) {
-				System.out.println("You put your cloak on and throw the hood up. You see a corner in the room that is hidden by shadows and stand there.\n"
-						+ "\"Good job,\" JORDAN says, \"You can come out now\"\n");
-			}
-
-			else {
-				System.out.println("You run out of the room, yelling \"NOPE! NOPE! NOPE!\" never to be seen again. ");
-				System.exit(0);
-			}
-
-			System.out.println("\"I think your training is complete, " + username + ",\" JORDAN says."
-					+ "\n\"Let's go out into the real world and help defend our home.\""
-					+ "\nJORDAN walks out of the training room and you follow them. There are birds chirping and the cool wind blows. "
-					+ "\nThere are bombs exploding in the distance and you hear the screaming of dying citizens.\n");
-
-			System.out.println("\"We have a couple of options on what we can do right now,\" JORDAN informs you. They hand you two pieces of paper."
-					+ "\nOne of the papers is a bounty for an INFERNON GENERAL. The other is asking for sensitive information. Both offer rewards of decent sizes."
-					+ "\n\"Which would you like to do?\" JORDAN asks. "
-					+ "\nChoose a response for JORDAN: "
-					+ "\n(A) I would like to kill the INFERNON GENERAL. "
-					+ "\n(B) I would like to find information.");
-			String dialogue2 = input.nextLine(); 
-			if (dialogue2.equalsIgnoreCase("a")) {
-				System.out.println("You lift the paper with the bounty on it. \"Let's go kill this guy,\" you say. "
-						+ "\nJORDAN nods. \"Good choice. That guy is one of the leaders of the invasion. Killing him would really help us.\""
-						+ "\nJORDAN pulls out a map from their knapsack. "
-						+ "\n\"The GENERAL is to the west of here. We will have to spend a couple of days travelling.\"\n "
-						+ "\nYou and JORDAN start heading west. It's morning and the sun is behind you. You hear the distant bombs and war cries from the warriors. "
-						+ "\nSuddenly, an enemy soldier appears! JORDAN throws on their cloak and runs to the trees nearby, being cautious that the enemy doesn't see them."
-						+ "\nDo you want to (Z) hide with JORDAN or (X) sneak up and kill the INFERNON SOLDIER? ");
-				String Fight1 = input.nextLine(); 
-				if (Fight1.equalsIgnoreCase("Z")) {
-					double chance2 = Math.random() * 11; 
-					if (chance2 > 2){
-						System.out.println("You throw your cloak over your body and crouch down, following JORDAN into the trees.\n");
-					}
-					else {
-						System.out.println("You throw your cloak over your body and crouch down. While following JORDAN into the trees,"
-								+ "\nyou snap a twig. The SOLDIER sees you and fires a gun in your direction. "
-								+ "\nJORDAN keeps running, and eventually flanks the soldier, who is approaching you with a giant SWORD. "
-								+ "\nJORDAN takes out their DAGGER and stabs the SOLDIER in the back, saving your life. "
-								+ "\n\"Let's keep moving, shall we?\" JORDAN says. You nod and follow them.\n");
-					}
-				}
-				else if (Fight1.equalsIgnoreCase("X")){
-					double chance2 = Math.random() * 11; 
-					if (chance2 > 6){
-						System.out.println("You crouch down low, and stalk up behind the SOLDIER. You prepare your DAGGER and jump up at just the right moment."
-								+ "\nYou slit the SOLDIER'S throat. They never saw it coming. "
-								+ "\nThe blood gurgles as the SOLDIER tries to breathe, choking on their on blood."
-								+ "\nYou walk back over to JORDAN who is smiling proudly at you. "
-								+ "\n\"You'll make a great assassin, " + username + ". Let's keep moving,\" they say to you.\n");
-					}
-					else {
-						System.out.println("You crouch down low, and stalk up behind the SOLDIER. You are inches away from them and they have no idea you're there."
-								+ "\nYou hear a hiss behind you and turn around, wondering what that noise was. It's JORDAN shaking their head 'no.' "
-								+ "\nYou back away from the SOLDIER slowly, letting them walk away."
-								+ "\n\"You're not ready for that!\" JORDAN whisper yells at you once the SOLDIER is out of earshot. "
-								+ "\n\"You would've gotten both of us killed. Just follow my lead, " + username + ". Now let's keep moving.\"\n ");
-					}
-				}
-
-				else {
-					System.out.println("You do nothing, continuing to stand out in the open. The SOLIDER turns around and sees you. "
-							+ "\nThey shoot you with their gun and you die.");
-					System.exit(0);
-				}
-				System.out.println("You and JORDAN keep moving west. Soon, the sun is setting and the day is cooling off.\n "
-						+ "\n\"Are you hungry? I have granola bars,\" JORDAN says, offering you a granola bar. You take it and sit down under a tree. "
-						+ "\n\"We probably shouldn't build a fire. The smoke would give out position away.\" "
-						+ "\n\"Let's also sleep in the trees, that way if INFERNONS come they won't see us,\" JORDAN suggests. "
-						+ "\nYou and JORDAN climb into different trees and try to sleep. It takes you a while to sleep. "
-						+ "\nThe screaming citizens and the bombs were keeping you up. Eventually, sleep overtakes you."
-						+ "[To be continued] ");
-			}
-
-			else if (dialogue2.equalsIgnoreCase("b")) {
-				System.out.println("You hold up the paper with the request for information. \"I want to help our side get information,\" you say. "
-						+ "\n\"We can definitely do that. Let's see if we can sneak into the Infernon headquarters and find out some of their war plans,\" JORDAN says.\n"
-						+ "\n\"We will have to travel east. There are some old castles there that the Infernons have turned into their headquarters. "
-						+ "\nYou and JORDAN start heading east. It's morning and the sun is in front of you. You hear the distant bombs and war cries from the warriors. "
-						+ "\nSuddenly, an enemy soldier appears! JORDAN throws on their cloak and runs to the trees nearby, being cautious that the enemy doesn't see them."
-						+ "\nDo you want to (Z) hide with JORDAN or (X) sneak up and kill the INFERNON SOLDIER? ");
-				String Fight1 = input.nextLine(); 
-				if (Fight1.equalsIgnoreCase("Z")) {
-					double chance2 = Math.random() * 11; 
-					if (chance2 > 2){
-						System.out.println("You throw your cloak over your body and crouch down, following JORDAN into the trees.\n");
-					}
-					else {
-						System.out.println("You throw your cloak over your body and crouch down. While following JORDAN into the trees,"
-								+ "\nyou snap a twig. The SOLDIER sees you and fires a gun in your direction. "
-								+ "\nJORDAN keeps running, and eventually flanks the soldier, who is approaching you with a giant SWORD. "
-								+ "\nJORDAN takes out their DAGGER and stabs the SOLDIER in the back, saving your life. "
-								+ "\n\"Let's keep moving, shall we?\" JORDAN says. You nod and follow them.\n");
-					}
-				}
-				else if (Fight1.equalsIgnoreCase("X")){
-					double chance2 = Math.random() * 11; 
-					if (chance2 > 6){
-						System.out.println("You crouch down low, and stalk up behind the SOLDIER. You prepare your DAGGER and jump up at just the right moment."
-								+ "\nYou slit the SOLDIER'S throat. They never saw it coming. "
-								+ "\nThe blood gurgles as the SOLDIER tries to breathe, choking on their on blood."
-								+ "\nYou walk back over to JORDAN who is smiling proudly at you. "
-								+ "\n\"You'll make a great assassin, " + username + ". Let's keep moving,\" they say to you.\n");
-					}
-					else {
-						System.out.println("You crouch down low, and stalk up behind the SOLDIER. You are inches away from them and they have no idea you're there."
-								+ "\nYou hear a hiss behind you and turn around, wondering what that noise was. It's JORDAN shaking their head 'no.' "
-								+ "\nYou back away from the SOLDIER slowly, letting them walk away."
-								+ "\n\"You're not ready for that!\" JORDAN whisper yells at you once the SOLDIER is out of earshot. "
-								+ "\n\"You would've gotten both of us killed. Just follow my lead, " + username + ". Now let's keep moving.\"\n ");
-					}
-				}
-
-				else {
-					System.out.println("You do nothing, continuing to stand out in the open. The SOLIDER turns around and sees you. "
-							+ "\nThey shoot you with their gun and you die.");
-					System.exit(0);
-				}
-				System.out.println("You and JORDAN keep moving east. Soon, the sun is setting and the day is cooling off.\n "
-						+ "\n\"Are you hungry? I have granola bars,\" JORDAN says, offering you a granola bar. You take it and sit down under a tree. "
-						+ "\n\"We probably shouldn't build a fire. The smoke would give out position away.\" "
-						+ "\n\"Let's also sleep in the trees, that way if INFERNONS come they won't see us,\" JORDAN suggests. "
-						+ "\nYou and JORDAN climb into different trees and try to sleep. It takes you a while to sleep. "
-						+ "\nThe screaming citizens and the bombs were keeping you up. Eventually, sleep overtakes you."
-						+ "[To be continued] ");
-
-			}
-
-			else {
-				System.out.println("You run away, yelling \"NOPE! NOPE! NOPE!\" never to be seen again. ");
-				System.exit(0);
-			}
-		
-	}
-
-
-	private static void customMethodKendall() {
+	private static void customMethodKendall(String username) {
 		Scanner input = new Scanner(System.in);
 		System.out.println("You chose to play as a MAGICIAN! \nLet me introduce you to my friend KENDALL."
 				+ "\nKENDALL is a wise mage who will lead you on your adventure.\n");
@@ -384,12 +177,217 @@ public class ActualGame {
 			System.out.println("You run away, yelling \"NOPE! NOPE! NOPE!\" never to be seen again. ");
 			System.exit(0);
 		}			
-		
+
 	}
 
 
-	
-	private static void customMethodTaylor() {
+	private static void customMethodJordan(String username) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("You chose to play as an ASSASSIN! \nLet me introduce you to my friend JORDAN."
+				+ "\nJORDAN is a master assassin who will lead you on your adventure.\n");
+
+		System.out.println("JORDAN saunters out from the shadows and shakes your hand."
+				+ "\n\"Hello, " + username + ", \" JORDAN says to you, \"Let's begin training. First, you will need a weapon.\" "
+				+ "\nJORDAN reaches into a knapsack on their back and hands you a beautiful ebony DAGGER and a CLOAK."
+				+ "\n\"Here is a DAGGER. This is the weapon of the ASSASSIN. The CLOAK will hide you as you stalk your enemies.\"\n ");
+
+		System.out.println("Choose a response for JORDAN: "
+				+ "\n(A) Thank you for the equipment. What is our mission?"
+				+ "\n(B) Why do I need this stuff? What's going on?"
+				+ "\n(C) Say nothing. ");
+		String dialogue1 = input.nextLine();
+
+		if (dialogue1.equalsIgnoreCase("a")) { 
+			System.out.println("\"Thank you for the equipment, \" you say, \"What's our mission?\" ");
+			System.out.println("JORDAN smiles at you and says, ");
+		}
+
+		else if (dialogue1.equalsIgnoreCase("b")){
+			System.out.println("You look at the equipment in your arms, very confused. "
+					+ "\n\"Why do I need this stuff?\" you ask, \"What's going on?\"\n ");
+			System.out.println("\"Not even a thank you?\" JORDAN asks. ");
+		}
+
+		else if (dialogue1.equalsIgnoreCase("c")) {
+			System.out.println("You look at the equipment in your arms and look back up at JORDAN, saying nothing." );
+			System.out.println("\"You're a quiet one, eh?\" JORDAN says to you. ");
+		}
+
+		else {
+			System.out.println("You take the dagger and stab JORDAN, killing them instantly. Next, you turn on ME!?!? OH NO--");
+			System.exit(0);
+		}
+		System.out.print("\"I will be training you to help save our planet from the invasion of the INFERNONS,\" JORDAN explains. "
+				+ "\n\"You have been chosen because you seem to have a special aptitude for mischief.\"\n"
+				+ "\nJORDAN brings a dummy out of a nearby closet. "
+				+ "\n\"It's time to train,\" they say. They crouch down, out of sight of the target, creep slowly behind the dummy, and slit its throat."
+				+ "\n\"This is called the STALK ATTACK. You can do it by pressing X on your keyboard. Try it out!\""
+				+ "\n[Press X]\n");
+		String stalk_attack1 = input.nextLine(); 
+		if (stalk_attack1.equalsIgnoreCase("x")) {
+			double chance1 = Math.random() * 11; 
+			if (chance1 > 5) {
+				System.out.println("You crouch down and slowly approach the dummy. When you're sure the target cannot see you, you jump up and slit its throat."
+						+ "\n\"Great job!\" JORDAN crongratulates you. ");
+			}
+
+			else {
+				System.out.println("You crouch down and walk towards your enemy. You jump up, but it's too soon. "
+						+ "\n\"Stop!\" JORDAN interrupts you. \"You've been seen and, consequently, killed by guards. Be slower and quieter next time.\"");
+			}
+		}
+
+		else {
+			System.out.println("You run out of the room, yelling \"NOPE! NOPE! NOPE!\" never to be seen again. ");
+			System.exit(0);
+		}
+
+		System.out.println("\"Next, I will show you how to HIDE,\" JORDAN says, \"Simply wear your CLOAK and hide somewhere. "
+				+ "\nIf you're eavesdropping, make sure you remember what you hear.\""
+				+ "\nJORDAN puts on their cloak and steps back out of your sight, into the shadows. "
+				+ "\nYou can see them, of course, but only because you know they're there."
+				+ "\n\"Press Z to put on your cloak and hide,\" JORDAN instructs. "
+				+ "\n[Press Z]");
+		String hide1 = input.nextLine(); 
+		if (hide1.equalsIgnoreCase("z")) {
+			System.out.println("You put your cloak on and throw the hood up. You see a corner in the room that is hidden by shadows and stand there.\n"
+					+ "\"Good job,\" JORDAN says, \"You can come out now\"\n");
+		}
+
+		else {
+			System.out.println("You run out of the room, yelling \"NOPE! NOPE! NOPE!\" never to be seen again. ");
+			System.exit(0);
+		}
+
+		System.out.println("\"I think your training is complete, " + username + ",\" JORDAN says."
+				+ "\n\"Let's go out into the real world and help defend our home.\""
+				+ "\nJORDAN walks out of the training room and you follow them. There are birds chirping and the cool wind blows. "
+				+ "\nThere are bombs exploding in the distance and you hear the screaming of dying citizens.\n");
+
+		System.out.println("\"We have a couple of options on what we can do right now,\" JORDAN informs you. They hand you two pieces of paper."
+				+ "\nOne of the papers is a bounty for an INFERNON GENERAL. The other is asking for sensitive information. Both offer rewards of decent sizes."
+				+ "\n\"Which would you like to do?\" JORDAN asks. "
+				+ "\nChoose a response for JORDAN: "
+				+ "\n(A) I would like to kill the INFERNON GENERAL. "
+				+ "\n(B) I would like to find information.");
+		String dialogue2 = input.nextLine(); 
+		if (dialogue2.equalsIgnoreCase("a")) {
+			System.out.println("You lift the paper with the bounty on it. \"Let's go kill this guy,\" you say. "
+					+ "\nJORDAN nods. \"Good choice. That guy is one of the leaders of the invasion. Killing him would really help us.\""
+					+ "\nJORDAN pulls out a map from their knapsack. "
+					+ "\n\"The GENERAL is to the west of here. We will have to spend a couple of days travelling.\"\n "
+					+ "\nYou and JORDAN start heading west. It's morning and the sun is behind you. You hear the distant bombs and war cries from the warriors. "
+					+ "\nSuddenly, an enemy soldier appears! JORDAN throws on their cloak and runs to the trees nearby, being cautious that the enemy doesn't see them."
+					+ "\nDo you want to (Z) hide with JORDAN or (X) sneak up and kill the INFERNON SOLDIER? ");
+			String Fight1 = input.nextLine(); 
+			if (Fight1.equalsIgnoreCase("Z")) {
+				double chance2 = Math.random() * 11; 
+				if (chance2 > 2){
+					System.out.println("You throw your cloak over your body and crouch down, following JORDAN into the trees.\n");
+				}
+				else {
+					System.out.println("You throw your cloak over your body and crouch down. While following JORDAN into the trees,"
+							+ "\nyou snap a twig. The SOLDIER sees you and fires a gun in your direction. "
+							+ "\nJORDAN keeps running, and eventually flanks the soldier, who is approaching you with a giant SWORD. "
+							+ "\nJORDAN takes out their DAGGER and stabs the SOLDIER in the back, saving your life. "
+							+ "\n\"Let's keep moving, shall we?\" JORDAN says. You nod and follow them.\n");
+				}
+			}
+			else if (Fight1.equalsIgnoreCase("X")){
+				double chance2 = Math.random() * 11; 
+				if (chance2 > 6){
+					System.out.println("You crouch down low, and stalk up behind the SOLDIER. You prepare your DAGGER and jump up at just the right moment."
+							+ "\nYou slit the SOLDIER'S throat. They never saw it coming. "
+							+ "\nThe blood gurgles as the SOLDIER tries to breathe, choking on their on blood."
+							+ "\nYou walk back over to JORDAN who is smiling proudly at you. "
+							+ "\n\"You'll make a great assassin, " + username + ". Let's keep moving,\" they say to you.\n");
+				}
+				else {
+					System.out.println("You crouch down low, and stalk up behind the SOLDIER. You are inches away from them and they have no idea you're there."
+							+ "\nYou hear a hiss behind you and turn around, wondering what that noise was. It's JORDAN shaking their head 'no.' "
+							+ "\nYou back away from the SOLDIER slowly, letting them walk away."
+							+ "\n\"You're not ready for that!\" JORDAN whisper yells at you once the SOLDIER is out of earshot. "
+							+ "\n\"You would've gotten both of us killed. Just follow my lead, " + username + ". Now let's keep moving.\"\n ");
+				}
+			}
+
+			else {
+				System.out.println("You do nothing, continuing to stand out in the open. The SOLIDER turns around and sees you. "
+						+ "\nThey shoot you with their gun and you die.");
+				System.exit(0);
+			}
+			System.out.println("You and JORDAN keep moving west. Soon, the sun is setting and the day is cooling off.\n "
+					+ "\n\"Are you hungry? I have granola bars,\" JORDAN says, offering you a granola bar. You take it and sit down under a tree. "
+					+ "\n\"We probably shouldn't build a fire. The smoke would give out position away.\" "
+					+ "\n\"Let's also sleep in the trees, that way if INFERNONS come they won't see us,\" JORDAN suggests. "
+					+ "\nYou and JORDAN climb into different trees and try to sleep. It takes you a while to sleep. "
+					+ "\nThe screaming citizens and the bombs were keeping you up. Eventually, sleep overtakes you."
+					+ "[To be continued] ");
+		}
+
+		else if (dialogue2.equalsIgnoreCase("b")) {
+			System.out.println("You hold up the paper with the request for information. \"I want to help our side get information,\" you say. "
+					+ "\n\"We can definitely do that. Let's see if we can sneak into the Infernon headquarters and find out some of their war plans,\" JORDAN says.\n"
+					+ "\n\"We will have to travel east. There are some old castles there that the Infernons have turned into their headquarters. "
+					+ "\nYou and JORDAN start heading east. It's morning and the sun is in front of you. You hear the distant bombs and war cries from the warriors. "
+					+ "\nSuddenly, an enemy soldier appears! JORDAN throws on their cloak and runs to the trees nearby, being cautious that the enemy doesn't see them."
+					+ "\nDo you want to (Z) hide with JORDAN or (X) sneak up and kill the INFERNON SOLDIER? ");
+			String Fight1 = input.nextLine(); 
+			if (Fight1.equalsIgnoreCase("Z")) {
+				double chance2 = Math.random() * 11; 
+				if (chance2 > 2){
+					System.out.println("You throw your cloak over your body and crouch down, following JORDAN into the trees.\n");
+				}
+				else {
+					System.out.println("You throw your cloak over your body and crouch down. While following JORDAN into the trees,"
+							+ "\nyou snap a twig. The SOLDIER sees you and fires a gun in your direction. "
+							+ "\nJORDAN keeps running, and eventually flanks the soldier, who is approaching you with a giant SWORD. "
+							+ "\nJORDAN takes out their DAGGER and stabs the SOLDIER in the back, saving your life. "
+							+ "\n\"Let's keep moving, shall we?\" JORDAN says. You nod and follow them.\n");
+				}
+			}
+			else if (Fight1.equalsIgnoreCase("X")){
+				double chance2 = Math.random() * 11; 
+				if (chance2 > 6){
+					System.out.println("You crouch down low, and stalk up behind the SOLDIER. You prepare your DAGGER and jump up at just the right moment."
+							+ "\nYou slit the SOLDIER'S throat. They never saw it coming. "
+							+ "\nThe blood gurgles as the SOLDIER tries to breathe, choking on their on blood."
+							+ "\nYou walk back over to JORDAN who is smiling proudly at you. "
+							+ "\n\"You'll make a great assassin, " + username + ". Let's keep moving,\" they say to you.\n");
+				}
+				else {
+					System.out.println("You crouch down low, and stalk up behind the SOLDIER. You are inches away from them and they have no idea you're there."
+							+ "\nYou hear a hiss behind you and turn around, wondering what that noise was. It's JORDAN shaking their head 'no.' "
+							+ "\nYou back away from the SOLDIER slowly, letting them walk away."
+							+ "\n\"You're not ready for that!\" JORDAN whisper yells at you once the SOLDIER is out of earshot. "
+							+ "\n\"You would've gotten both of us killed. Just follow my lead, " + username + ". Now let's keep moving.\"\n ");
+				}
+			}
+
+			else {
+				System.out.println("You do nothing, continuing to stand out in the open. The SOLIDER turns around and sees you. "
+						+ "\nThey shoot you with their gun and you die.");
+				System.exit(0);
+			}
+			System.out.println("You and JORDAN keep moving east. Soon, the sun is setting and the day is cooling off.\n "
+					+ "\n\"Are you hungry? I have granola bars,\" JORDAN says, offering you a granola bar. You take it and sit down under a tree. "
+					+ "\n\"We probably shouldn't build a fire. The smoke would give out position away.\" "
+					+ "\n\"Let's also sleep in the trees, that way if INFERNONS come they won't see us,\" JORDAN suggests. "
+					+ "\nYou and JORDAN climb into different trees and try to sleep. It takes you a while to sleep. "
+					+ "\nThe screaming citizens and the bombs were keeping you up. Eventually, sleep overtakes you."
+					+ "[To be continued] ");
+
+		}
+
+		else {
+			System.out.println("You run away, yelling \"NOPE! NOPE! NOPE!\" never to be seen again. ");
+			System.exit(0);
+		}
+
+	}
+
+
+	private static void customMethodTaylor(String username) {
 		Scanner input = new Scanner(System.in); 
 		System.out.println("You chose to play as a WARRIOR! \nLet me introduce you to my friend TAYLOR."
 				+ "\nTAYLOR is a brave warrior who will lead you on your adventure.\n");
@@ -507,6 +505,7 @@ public class ActualGame {
 		else {
 			System.out.println("You run away, yelling \"NOPE! NOPE! NOPE!\" never to be seen again. ");
 			System.exit(0);
-		
+
+		}
 	}
 }
