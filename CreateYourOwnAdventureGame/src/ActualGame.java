@@ -10,7 +10,8 @@ public class ActualGame {
 		GreetUserAndGetName(); 
 
 
-		System.out.println("This is a game where you will control your own destiny. \nWould like to play as (A) an ASSASSIN, (B) a MAGICIAN, or (C) a WARRIOR?");
+		System.out.println("This is a game where you will control your own destiny. "
+				+ "\nWould like to play as (A) an ASSASSIN, (B) a MAGICIAN, or (C) a WARRIOR?\n");
 		String characterType = input.nextLine(); 
 
 		if (characterType.equalsIgnoreCase("a")) {
@@ -45,6 +46,7 @@ public class ActualGame {
 		
 		return username;
 	}
+	
 	
 	private static void customMethodKendall() {
 		Scanner input = new Scanner(System.in);
@@ -179,6 +181,7 @@ public class ActualGame {
 		
 	}
 
+	
 	private static void customMethodJordan() {
 		Scanner input = new Scanner(System.in);
 			System.out.println("You chose to play as an ASSASSIN! \nLet me introduce you to my friend JORDAN."
@@ -384,6 +387,7 @@ public class ActualGame {
 		
 	}
 
+	
 	private static void customMethodTaylor() {
 		Scanner input = new Scanner(System.in); 
 		System.out.println("You chose to play as a WARRIOR! \nLet me introduce you to my friend TAYLOR."
