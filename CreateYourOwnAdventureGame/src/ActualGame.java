@@ -102,7 +102,8 @@ public class ActualGame {
 		entertoCont();
 		System.out.println("JORDAN brings a dummy out of a nearby closet. ");
 		entertoCont();
-		System.out.println("\"It's time to train,\" they say. They crouch down, out of sight of the target, creep slowly behind the dummy, and slit its throat. ");
+		System.out.println("\"It's time to train,\" they say. They crouch down, out of sight of the target, "
+				+ "creep slowly behind the dummy, and slit its throat. ");
 		entertoCont();
 		System.out.println("\"This is called the STALK ATTACK. You can do it by pressing X on your keyboard. Try it out!\"");
 		System.out.println("[Press X]");
@@ -263,27 +264,37 @@ public class ActualGame {
 					+ "\nThey shoot you with their gun and you die.");
 			System.exit(0);
 		}
-		System.out.println("You and JORDAN keep moving west. Soon, the sun is setting and the day is cooling off.\n "
-				+ "\n\"Are you hungry? I have granola bars,\" JORDAN says, offering you a granola bar. You take it and sit down under a tree. "
-				+ "\n\"We probably shouldn't build a fire. The smoke would give out position away.\" "
-				+ "\n\"Let's also sleep in the trees, that way if INFERNONS come they won't see us,\" JORDAN suggests. "
-				+ "\nYou and JORDAN climb into different trees and try to sleep. It takes you a while to sleep. "
-				+ "\nThe screaming citizens and the bombs were keeping you up. Eventually, sleep overtakes you."
+		System.out.println("You and JORDAN keep moving west. Soon, the sun is setting and the day is cooling off.");
+		entertoCont();
+		System.out.println("\"Are you hungry? I have granola bars,\" JORDAN says, offering you a granola bar. You take it and sit down under a tree. ");
+		entertoCont();
+		System.out.println("\"We probably shouldn't build a fire. The smoke would give out position away.\" ");
+		entertoCont();
+		System.out.println("\"Let's also sleep in the trees, that way if INFERNONS come they won't see us,\" JORDAN suggests. ");
+		entertoCont();
+		System.out.println("You and JORDAN climb into different trees and try to sleep. It takes you a while to sleep. ");
+		entertoCont();
+		System.out.println("The screaming citizens and the bombs were keeping you up. Eventually, sleep overtakes you."
 				+ "\n[To be continued] ");
 	}
 	
 	private static void JordanMission1OptionB(String dialogue2, String username){
 		Scanner input = new Scanner(System.in);
 		
-		System.out.println("You hold up the paper with the request for information. \"I want to help our side get information,\" you say. "
-				+ "\n\"We can definitely do that. Let's see if we can sneak into the Infernon headquarters and find out some of their war "
-				+ "plans,\" JORDAN says.\n"
-				+ "\n\"We will have to travel east. There are some old castles there that the Infernons have turned into their headquarters. "
-				+ "\nYou and JORDAN start heading east. It's morning and the sun is in front of you. You hear the distant bombs and war cries "
-				+ "from the warriors. "
-				+ "\nSuddenly, an enemy soldier appears! JORDAN throws on their cloak and runs to the trees nearby, being cautious that the "
-				+ "enemy doesn't see them."
-				+ "\nDo you want to (Z) hide with JORDAN or (X) sneak up and kill the INFERNON SOLDIER? ");
+		System.out.println("You hold up the paper with the request for information. \"I want to help our side get information,\" you say. ");
+		entertoCont();
+		System.out.println("\"We can definitely do that. Let's see if we can sneak into the Infernon headquarters and find out some of their war "
+				+ "plans,\" JORDAN says.");
+		entertoCont();
+		System.out.println("\"We will have to travel east. There are some old castles there that the Infernons have turned into their headquarters. ");
+		entertoCont();
+		System.out.println("You and JORDAN start heading east. It's morning and the sun is in front of you. You hear the distant bombs and war cries "
+				+ "from the warriors. ");
+		entertoCont();
+		System.out.println("Suddenly, an enemy soldier appears! JORDAN throws on their cloak and runs to the trees nearby, being cautious that the "
+				+ "enemy doesn't see them.");
+		entertoCont();
+		System.out.println("Do you want to (Z) hide with JORDAN or (X) sneak up and kill the INFERNON SOLDIER? ");
 		String Fight1 = input.nextLine(); 
 		if (Fight1.equalsIgnoreCase("Z")) {
 			double chance2 = Math.random() * 11; 
@@ -291,30 +302,45 @@ public class ActualGame {
 				System.out.println("You throw your cloak over your body and crouch down, following JORDAN into the trees.\n");
 			}
 			else {
-				System.out.println("You throw your cloak over your body and crouch down. While following JORDAN into the trees,"
-						+ "\nyou snap a twig. The SOLDIER sees you and fires a gun in your direction. "
-						+ "\nJORDAN keeps running, and eventually flanks the soldier, who is approaching you with a giant SWORD. "
-						+ "\nJORDAN takes out their DAGGER and stabs the SOLDIER in the back, saving your life. "
-						+ "\n\"Let's keep moving, shall we?\" JORDAN says. You nod and follow them.\n");
+				System.out.println("You throw your cloak over your body and crouch down. While following JORDAN into the trees,");
+				entertoCont();
+				System.out.println("you snap a twig. The SOLDIER sees you and fires a gun in your direction. ");
+				entertoCont();
+				System.out.println("JORDAN keeps running, and eventually flanks the soldier, who is approaching you with a giant SWORD. ");
+				entertoCont();
+				System.out.println("JORDAN takes out their DAGGER and stabs the SOLDIER in the back, saving your life. ");
+				entertoCont();
+				System.out.println("\"Let's keep moving, shall we?\" JORDAN says. You nod and follow them.\n");
+				entertoCont();
 			}
 		}
 		else if (Fight1.equalsIgnoreCase("X")){
 			double chance2 = Math.random() * 11; 
 			if (chance2 > 6){
 				System.out.println("You crouch down low, and stalk up behind the SOLDIER. You prepare your DAGGER and jump up at just the "
-						+ "right moment."
-						+ "\nYou slit the SOLDIER'S throat. They never saw it coming. "
-						+ "\nThe blood gurgles as the SOLDIER tries to breathe, choking on their on blood."
-						+ "\nYou walk back over to JORDAN who is smiling proudly at you. "
-						+ "\n\"You'll make a great assassin, " + username + ". Let's keep moving,\" they say to you.\n");
+						+ "right moment.");
+				entertoCont();
+				System.out.println("You slit the SOLDIER'S throat. They never saw it coming. ");
+				entertoCont();
+				System.out.println("The blood gurgles as the SOLDIER tries to breathe, choking on their on blood.");
+				entertoCont();
+				System.out.println("You walk back over to JORDAN who is smiling proudly at you. ");
+				entertoCont();
+				System.out.println("\"You'll make a great assassin, " + username + ". Let's keep moving,\" they say to you.");
+				entertoCont();
 			}
 			else {
 				System.out.println("You crouch down low, and stalk up behind the SOLDIER. You are inches away from them and they have no "
-						+ "idea you're there."
-						+ "\nYou hear a hiss behind you and turn around, wondering what that noise was. It's JORDAN shaking their head 'no.' "
-						+ "\nYou back away from the SOLDIER slowly, letting them walk away."
-						+ "\n\"You're not ready for that!\" JORDAN whisper yells at you once the SOLDIER is out of earshot. "
-						+ "\n\"You would've gotten both of us killed. Just follow my lead, " + username + ". Now let's keep moving.\"\n ");
+						+ "idea you're there.");
+				entertoCont();
+				System.out.println("You hear a hiss behind you and turn around, wondering what that noise was. It's JORDAN shaking their head 'no.' ");
+				entertoCont();
+				System.out.println("You back away from the SOLDIER slowly, letting them walk away.");
+				entertoCont();
+				System.out.println("\"You're not ready for that!\" JORDAN whisper yells at you once the SOLDIER is out of earshot. ");
+				entertoCont();
+				System.out.println("\"You would've gotten both of us killed. Just follow my lead, " + username + ". Now let's keep moving.\"\n ");
+				entertoCont();
 			}
 		}
 
@@ -323,22 +349,37 @@ public class ActualGame {
 					+ "\nThey shoot you with their gun and you die.");
 			System.exit(0);
 		}
-		System.out.println("You and JORDAN keep moving east. Soon, the sun is setting and the day is cooling off.\n "
-				+ "\n\"Are you hungry? I have granola bars,\" JORDAN says, offering you a granola bar. You take it and sit down under a tree. "
-				+ "\n\"We probably shouldn't build a fire. The smoke would give out position away.\" "
-				+ "\n\"Let's also sleep in the trees, that way if INFERNONS come they won't see us,\" JORDAN suggests. "
-				+ "\nYou and JORDAN climb into different trees and try to sleep. It takes you a while to sleep. "
-				+ "\nThe screaming citizens and the bombs were keeping you up. Eventually, sleep overtakes you.\n"
-				+ "\n\"Wake up!\" someone shouts at you. You are dreaming and you can hear their voice in your dream. "
-				+ "\nYou are shaking and your dream world is falling apart. You open your eyes. It's JORDAN. "
-				+ "\n\"Get up, we got shit to do,\" JORDAN says. They have their bags packed and are strapping their boots back on their feet."
-				+ "\nYou get up and take a drink of water from your canteen. Soon, you and JORDAN are on the road again. "
-				+ "\nAfter a while, you come across a camp of what looks like Infernon soldiers. They have several tents surrounding a campfire. "
-				+ "\nIt almost looks cozy until you remember that these are deadly soldiers that want to kill you. "
-				+ "\nYou and JORDAN take cover in some nearby trees to plan your attack."
-				+ "\n\"See the big tent with the table?\" JORDAN asks you. You nod. "
-				+ "\n\"That's where the general keeps her books. The books have the information we need,\" JORDAN explains. "
-				+ "\n\"We'll need to get through all of the soldiers, first,\" you notice. "
+		System.out.println("You and JORDAN keep moving east. Soon, the sun is setting and the day is cooling off.");
+		entertoCont();
+		System.out.println("\"Are you hungry? I have granola bars,\" JORDAN says, offering you a granola bar. You take it and sit down under a tree. ");
+		entertoCont();
+		System.out.println("\"We probably shouldn't build a fire. The smoke would give out position away.\" ");
+		entertoCont();
+		System.out.println("\"Let's also sleep in the trees, that way if INFERNONS come they won't see us,\" JORDAN suggests. ");
+		entertoCont();
+		System.out.println("You and JORDAN climb into different trees and try to sleep. It takes you a while to sleep. ");
+		entertoCont();
+		System.out.println("The screaming citizens and the bombs were keeping you up. Eventually, sleep overtakes you.");
+		entertoCont();
+		System.out.println("\"Wake up!\" someone shouts at you. You are dreaming and you can hear their voice in your dream. ");
+		entertoCont();
+		System.out.println("You are shaking and your dream world is falling apart. You open your eyes. It's JORDAN. ");
+		entertoCont();
+		System.out.println("\"Get up, we got shit to do,\" JORDAN says. They have their bags packed and are strapping their boots back on their feet.");
+		entertoCont();
+		System.out.println("You get up and take a drink of water from your canteen. Soon, you and JORDAN are on the road again. ");
+		entertoCont();
+		System.out.println("After a while, you come across a camp of what looks like Infernon soldiers. They have several tents surrounding a campfire. ");
+		entertoCont();
+		System.out.println("It almost looks cozy until you remember that these are deadly soldiers that want to kill you. ");
+		entertoCont();
+		System.out.println("You and JORDAN take cover in some nearby trees to plan your attack.");
+		entertoCont();
+		System.out.println("\"See the big tent with the table?\" JORDAN asks you. You nod. ");
+		entertoCont();
+		System.out.println("\"That's where the general keeps her books. The books have the information we need,\" JORDAN explains. ");
+		entertoCont();
+				+ "\"We'll need to get through all of the soldiers, first,\" you notice. "
 				+ "\n\"How do you propose we do that?\" JORDAN asks. "
 				+ "\nChoose a plan of attack: "
 				+ "\n(A) Ambush the soldiers and take them all at once "
