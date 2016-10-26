@@ -30,7 +30,7 @@ public class ActualGame {
 		Scanner input = new Scanner(System.in); 
 		
 		String username;
-		username = GreetUserAndGetName();
+		username = GreetUserAndGetName1(); 
 
 		System.out.println("This is a game where you will control your own destiny. "
 				+ "\nWould like to play as (A) an ASSASSIN, (B) a MAGICIAN, or (C) a WARRIOR?\n");
@@ -55,6 +55,18 @@ public class ActualGame {
 			System.exit(0);
 		}	
 
+	}
+
+	private static String GreetUserAndGetName1() {
+		System.out.print("Welcome to the Choose Your Own Adventure Game!\n");
+
+		Scanner input = new Scanner(System.in); 
+
+		System.out.println("What is your name? "); 
+		String username = input.nextLine();
+		System.out.println("Hello " + username +"!");
+
+		return username;
 	}
 
 	private static void customMethodJordan(String username) {
@@ -551,19 +563,4 @@ public class ActualGame {
 		}
 	}
 
-	private static String GreetUserAndGetName() {
-		System.out.print("Welcome to the Choose Your Own Adventure Game!\n");
-		
-		//default title and icon
-		JOptionPane.showMessageDialog(frame, "Eggs are not supposed to be green.");
-		
-		Scanner input = new Scanner(System.in); 
-
-		System.out.println("What is your name? "); 
-		String username = input.nextLine();
-		System.out.println("Hello " + username +"!");
-		
-		return username;
-		
-	}
 }
