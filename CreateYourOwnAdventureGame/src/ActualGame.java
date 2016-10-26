@@ -1,5 +1,28 @@
 import java.util.Scanner; 
 
+// Jeremy adding code to do pop up boxes. Start
+
+import javax.swing.JOptionPane;
+import javax.swing.JDialog;
+import javax.swing.JButton;
+import javax.swing.JRadioButton;
+import javax.swing.ButtonGroup;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
+import javax.swing.BoxLayout;
+import javax.swing.Box;
+import javax.swing.BorderFactory;
+import javax.swing.border.Border;
+import javax.swing.JTabbedPane;
+import javax.swing.JPanel;
+import javax.swing.JFrame;
+import java.beans.*; //Property change stuff
+import java.awt.*;
+import java.awt.event.*;
+//Jeremy adding code to do pop up boxes. Start
+
+
+
 public class ActualGame {
 
 
@@ -530,6 +553,9 @@ public class ActualGame {
 
 	private static String GreetUserAndGetName() {
 		System.out.print("Welcome to the Choose Your Own Adventure Game!\n");
+		
+		//default title and icon
+		JOptionPane.showMessageDialog(frame, "Eggs are not supposed to be green.");
 		
 		Scanner input = new Scanner(System.in); 
 
