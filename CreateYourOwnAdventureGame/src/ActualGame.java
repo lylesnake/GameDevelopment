@@ -1,15 +1,36 @@
 import java.util.Scanner; 
 
+// Jeremy adding code to do pop up boxes. Start
+
+import javax.swing.JOptionPane;
+import javax.swing.JDialog;
+import javax.swing.JButton;
+import javax.swing.JRadioButton;
+import javax.swing.ButtonGroup;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
+import javax.swing.BoxLayout;
+import javax.swing.Box;
+import javax.swing.BorderFactory;
+import javax.swing.border.Border;
+import javax.swing.JTabbedPane;
+import javax.swing.JPanel;
+import javax.swing.JFrame;
+import java.beans.*; //Property change stuff
+import java.awt.*;
+import java.awt.event.*;
+//Jeremy adding code to do pop up boxes. Start
+
+
+
 public class ActualGame {
 
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in); 
 		
-
 		String username;
 		username = GreetUserAndGetName1(); 
-
 
 		System.out.println("This is a game where you will control your own destiny. "
 				+ "\nWould like to play as (A) an ASSASSIN, (B) a MAGICIAN, or (C) a WARRIOR?\n");
@@ -541,6 +562,5 @@ public class ActualGame {
 
 		}
 	}
-
 
 }
