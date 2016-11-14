@@ -30,19 +30,12 @@ public class ActualGame {
 		Scanner input = new Scanner(System.in); 
 		
 		String username;
-<<<<<<< HEAD
-		username = GreetUserAndGetName1(); 
-
-		System.out.println("This is a game where you will control your own destiny. "
-				+ "\nWould like to play as (A) an ASSASSIN, (B) a MAGICIAN, or (C) a WARRIOR?\n");
-=======
 		username = GreetUserAndGetName(); 
 		
 		
 		System.out.println("This is a game where you will control your own destiny. ");
 		entertoCont();
 		System.out.println("Would like to play as (A) an ASSASSIN, (B) a MAGICIAN, or (C) a WARRIOR?");
->>>>>>> Lyle
 		String characterType = input.nextLine(); 
 		
 		if (characterType.equalsIgnoreCase("a")) {
@@ -65,15 +58,10 @@ public class ActualGame {
 		}	
 		
 	}
-<<<<<<< HEAD
 
-	private static String GreetUserAndGetName1() {
-		System.out.print("Welcome to the Choose Your Own Adventure Game!\n");
-
-=======
 	
 	private static String GreetUserAndGetName() {
->>>>>>> Lyle
+
 		Scanner input = new Scanner(System.in); 
 		System.out.println("Welcome to the Choose Your Own Adventure Game!");
 		entertoCont();
@@ -270,14 +258,16 @@ public class ActualGame {
 			else {
 				System.out.println("You throw your cloak over your body and crouch down. ");
 				entertoCont();
-				System.out.println("While following JORDAN into the trees, you snap a twig. The SOLDIER sees you and fires their gun at you, killing you. ");
+				System.out.println("While following JORDAN into the trees, you snap a twig. The SOLDIER sees you and fires their gun at you, "
+						+ "killing you. ");
 				System.exit(0);
 			}
 		}
 		else if (Fight1.equalsIgnoreCase("X")){
 			double chance2 = Math.random() * 11; 
 			if (chance2 > 6){
-				System.out.println("You crouch down low, and stalk up behind the SOLDIER. You prepare your DAGGER and jump up at just the right moment.");
+				System.out.println("You crouch down low, and stalk up behind the SOLDIER. You prepare your DAGGER and jump up at just the "
+						+ "right moment.");
 				entertoCont();
 				System.out.println("You slit the SOLDIER'S throat. They never saw it coming. ");
 				entertoCont();
@@ -289,9 +279,11 @@ public class ActualGame {
 				entertoCont();
 			}
 			else {
-				System.out.println("You crouch down low, and stalk up behind the SOLDIER. You are inches away from them and they have no idea you're there.");
+				System.out.println("You crouch down low, and stalk up behind the SOLDIER. You are inches away from them and they have no "
+						+ "idea you're there.");
 				entertoCont();
-				System.out.println("You step on a twig and the SOLDIER whirls around to face you. The SOLDIER shoots you with their gun, killing you instantly.");
+				System.out.println("You step on a twig and the SOLDIER whirls around to face you. The SOLDIER shoots you with their gun, "
+						+ "killing you instantly.");
 				System.exit(0);
 			}
 		}
@@ -388,7 +380,8 @@ public class ActualGame {
 		}
 		System.out.println("You and JORDAN keep moving east. Soon, the sun is setting and the day is cooling off.");
 		entertoCont();
-		System.out.println("\"Are you hungry? I have granola bars,\" JORDAN says, offering you a granola bar. You take it and sit down under a tree. ");
+		System.out.println("\"Are you hungry? I have granola bars,\" JORDAN says, offering you a granola bar. You take it and sit down "
+				+ "under a tree. ");
 		entertoCont();
 		System.out.println("\"We probably shouldn't build a fire. The smoke would give out position away.\" ");
 		entertoCont();
@@ -402,11 +395,13 @@ public class ActualGame {
 		entertoCont();
 		System.out.println("You are shaking and your dream world is falling apart. You open your eyes. It's JORDAN. ");
 		entertoCont();
-		System.out.println("\"Get up, we got shit to do,\" JORDAN says. They have their bags packed and are strapping their boots back on their feet.");
+		System.out.println("\"Get up, we got shit to do,\" JORDAN says. They have their bags packed and are strapping their boots back on "
+				+ "their feet.");
 		entertoCont();
 		System.out.println("You get up and take a drink of water from your canteen. Soon, you and JORDAN are on the road again. ");
 		entertoCont();
-		System.out.println("After a while, you come across a camp of what looks like Infernon soldiers. They have several tents surrounding a campfire. ");
+		System.out.println("After a while, you come across a camp of what looks like Infernon soldiers. They have several tents surrounding "
+				+ "a campfire. ");
 		entertoCont();
 		System.out.println("It almost looks cozy until you remember that these are deadly soldiers that want to kill you. ");
 		entertoCont();
@@ -416,31 +411,42 @@ public class ActualGame {
 		entertoCont();
 		System.out.println("\"That's where the general keeps her books. The books have the information we need,\" JORDAN explains. ");
 		entertoCont();
-				+ "\"We'll need to get through all of the soldiers, first,\" you notice. "
-				+ "\n\"How do you propose we do that?\" JORDAN asks. "
-				+ "\nChoose a plan of attack: "
-				+ "\n(A) Ambush the soldiers and take them all at once "
-				+ "\n(B) Sneak up on the few soldiers guarding the tent and slit their throats "
+		System.out.println("\"We'll need to get through all of the soldiers, first,\" you notice. ");
+		entertoCont();
+		System.out.println("\"How do you propose we do that?\" JORDAN asks. ");
+		entertoCont();
+		System.out.println("Choose a plan of attack: "
+				+ "\n(A) Ambush the soldiers and take them all at once, take the journal after every last one of them is dead and bleeding"
+				+ "\n(B) Sneak up on the few soldiers guarding the tent and slit their throats, taking the journal stealthily "
 				+ "\n(C) Wait until nightfall and then sneak into the general's tent and steal the journal, not killing anyone");
 			String planOfAttack1 = input.nextLine(); 
 			if (planOfAttack1.equalsIgnoreCase("a")){
-				System.out.println("You don't even wait for JORDAN to follow you. "
-						+ "\nYou jump into the middle of the soldiers' camp and they notice you at once."
-						+ "\nYou stab a soldier on your right, and then another on your left. You feel the warm blood of your opponents on your arms and face."
-						+ "\nJORDAN is shouting at you but you ignore them. Killing these Infernons is all that matters. "
-						+ "\nSomeone comes up to you and punches you before your knife can reach their throat. "
-						+ "\n\"Finally, a real opponent,\" you challenge the soldier in front of you. "
-						+ "\n\"You will die tonight, Portum scum,\" the soldier growls. "
+				System.out.println("You don't even wait for JORDAN to follow you. ");
+				entertoCont();
+				System.out.println("You jump into the middle of the soldiers' camp and they notice you at once.");
+				entertoCont();
+				System.out.println("You stab a soldier on your right, and then another on your left. You feel the warm blood of your opponents "
+						+ "on your arms and face.");
+				entertoCont();
+				System.out.println("JORDAN is shouting at you but you ignore them. Killing these Infernons is all that matters. ");
+				entertoCont();
+				System.out.println("Someone comes up to you and punches you before your knife can reach their throat. ");
+				entertoCont();
+				System.out.println("\"Finally, a real opponent,\" you challenge the soldier in front of you. ");
+				entertoCont();
+				System.out.println("\"You will die tonight, Portum scum,\" the soldier growls. "				
 						+ "\n[Press x to stab your opponent]"); 
 				String stab1 = input.nextLine(); 
 				if (stab1.equalsIgnoreCase("x")) {
 					double chance3 = Math.random() * 11;
 					if (chance3 > 4) {
 						System.out.println("Your knife connect with the soldier's arm and they grunt in pain."); 
+						entertoCont();
 					}
 					else if (chance3 < 4) {
-						System.out.println("You miss and your opponent laughs. "
-								+ "\n\"Is that the best you can do?\" they shout. ");
+						System.out.println("You swing your knife at your opponent but you miss, and they sink their blade deep into your abdomen. "
+								+ "You bleed to death. ");
+						System.exit(0); 
 					}
 					
 				}
@@ -457,14 +463,21 @@ public class ActualGame {
 	
 	private static void customMethodKendall(String username) {
 		Scanner input = new Scanner(System.in);
-		System.out.println("You chose to play as a MAGICIAN! \nLet me introduce you to my friend KENDALL."
-				+ "\nKENDALL is a wise mage who will lead you on your adventure.\n");
+		System.out.println("You chose to play as a MAGICIAN! \nLet me introduce you to my friend KENDALL.");
+		entertoCont();
+		System.out.println("KENDALL is a wise mage who will lead you on your adventure.");
+		entertoCont();
 
-		System.out.println("KENDALL appears in a puff of smoke that smells strangely of pancakes. "
-				+ "\n\"Greetings, " + username + ". My name is KENDALL. I will train you in the ways of the MAGICIAN.\""
-				+ "\nKENDALL reaches into a bag on his waist and hands you a STAFF. "
-				+ "\n\"This STAFF can help you with all of the powerful spells. "
-				+ "I see you already have an aptitude for FIRE MAGICK. Show me your skills, apprentice.\"\n");
+		System.out.println("KENDALL appears in a puff of smoke that smells strangely of pancakes. ");
+		entertoCont();
+		System.out.println("\"Greetings, " + username + ". My name is KENDALL. I will train you in the ways of the MAGICIAN.\"");
+		entertoCont();
+		System.out.println("KENDALL reaches into a bag on his waist and hands you a STAFF. ");
+		entertoCont();
+		System.out.println("\"This STAFF can help you with all of the powerful spells. ");
+		entertoCont();
+		System.out.println("I see you already have an aptitude for FIRE MAGICK. Show me your skills, apprentice.\"");
+		entertoCont();
 
 		System.out.println("Choose a response for KENDALL: "
 				+ "\n(A) I think I know what I'm doing. *Shoot a weak blast of FIRE MAGICK at the wall.* "
@@ -472,40 +485,57 @@ public class ActualGame {
 		String dialogue1 = input.nextLine();
 
 		if (dialogue1.equalsIgnoreCase("a")) { 
-			System.out.println("\"I think I know what I'm doing,\" you say. "
-					+ "\nYou step to the side of KENDALL, and aim your hands at the wall. "
-					+ "\nA weak blast of FIRE MAGICK bursts from you, slightly toasting the wall. ");
-			System.out.println("\"Excellent!\" KENDALL cheers.\n");
+			System.out.println("\"I think I know what I'm doing,\" you say. ");
+			entertoCont();
+			System.out.println("You step to the side of KENDALL, and aim your hands at the wall. ");
+			entertoCont();
+			System.out.println("A weak blast of FIRE MAGICK bursts from you, slightly toasting the wall. ");
+			entertoCont();
+			System.out.println("\"Excellent!\" KENDALL cheers.");
+			entertoCont();
 		}
 
 		else if (dialogue1.equalsIgnoreCase("b")) {
-			System.out.println("You look at KENDALL with a very confused look on your face. "
-					+ "\n\"Why do I need to know MAGICK?\" you ask, \"What's going on here?\"  ");
+			System.out.println("You look at KENDALL with a very confused look on your face. "); 
+			entertoCont();
+			System.out.println("\"Why do I need to know MAGICK?\" you ask, \"What's going on here?\"  ");
+			entertoCont();
 			System.out.println("\"I'm not going to report you for knowing MAGICK,\" KENDALL assures you. ");
+			entertoCont();
 		}
 
 		else {
-			System.out.println("You aim your hands at KENDALL's head and shoot a blast of FIRE MAGICK at him, killing him instantly. Next, you turn on ME!?!? OH NO--");
+			System.out.println("You aim your hands at KENDALL's head and shoot a blast of FIRE MAGICK at him, killing him instantly. "
+					+ "\nNext, you turn on ME!?!? OH NO--");
 			System.exit(0);
 		}	
 
-		System.out.println("\"We are on a mission to save our planet from the invading INFERNONS,\" KENDALL explains. "
-				+ "\n\"In order for you to be of any help to us at all, you'll require training. I will teach you two basic spells.\""
-				+ "\nKENDALL aims his STAFF at the wall and shoots a powerful blast of FIRE MAGICK at the it. The flame leaves the wall blackened."
-				+ "\n\"That's called FLAME. You can do it by pressing X on your keyboard. Show me your skill, apprentice.\""
+		System.out.println("\"We are on a mission to save our planet from the invading INFERNONS,\" KENDALL explains. ");
+		entertoCont();
+		System.out.println("\"In order for you to be of any help to us at all, you'll require training. I will teach you two basic spells.\"");
+				entertoCont();
+		System.out.println("KENDALL aims his STAFF at the wall and shoots a powerful blast of FIRE MAGICK at the it. "
+				+ "The flame leaves the wall blackened.");
+		entertoCont();
+		System.out.println("\"That's called FLAME. You can do it by pressing X on your keyboard. Show me your skill, apprentice.\""
 				+ "\n[Press X]");
 		String fire1 = input.nextLine(); 
 
 		if (fire1.equalsIgnoreCase("x")) {
 			double chance1 = Math.random() * 11; 
 			if (chance1 > 5){
-				System.out.println("You lift your STAFF, aim at the wall, and shoot a powerful FLAME blast, knocking yourself down with your own force."
-						+ "\n\"Incredible,\" KENDALL says.");
+				System.out.println("You lift your STAFF, aim at the wall, and shoot a powerful FLAME blast, knocking yourself down with your "
+						+ "own force.");
+				entertoCont();
+				System.out.println("\"Incredible,\" KENDALL says.");
+				entertoCont();
 			}
 
 			else {
-				System.out.println("A weak puff of smoke comes out of your STAFF. KENDALL looks puzzled."
-						+ "\n\"I didn't think this would be so difficult for you, " + username +",\" he says, frowning.");
+				System.out.println("A weak puff of smoke comes out of your STAFF. KENDALL looks puzzled.");
+				entertoCont();
+				System.out.println("\"I didn't think this would be so difficult for you, " + username +",\" he says, frowning.");
+				entertoCont();
 			}
 		}
 
@@ -514,13 +544,16 @@ public class ActualGame {
 			System.exit(0);
 		}
 
-		System.out.println("KENDALL raises his STAFF above his head and begins to glow. His expression becomes peaceful. "
-				+ "\n\"What I just did was called HEALING. You can do it, too. Just press Z on your keyboard."
+		System.out.println("KENDALL raises his STAFF above his head and begins to glow. His expression becomes peaceful. ");
+		entertoCont();
+		System.out.println("\"What I just did was called HEALING. You can do it, too. Just press Z on your keyboard."
 				+ "\n[Press Z]");
 		String healing1 = input.nextLine(); 
 		if (healing1.equalsIgnoreCase("z")) {
-			System.out.println("You lift your STAFF above your head, willing it to heal you. "
-					+ "\nAlmost immediately, you feel your muscles rejuvnate and your mind clear.");
+			System.out.println("You lift your STAFF above your head, willing it to heal you. ");
+			entertoCont();
+			System.out.println("Almost immediately, you feel your muscles rejuvnate and your mind clear.");
+			entertoCont();
 		}
 
 		else {
@@ -528,34 +561,50 @@ public class ActualGame {
 			System.exit(0);
 		}
 
-		System.out.println("KENDALL grins at you. "
-				+ "\n\"You're doing incredibly well at this training, " + username + "! I think you are ready to go out into the real world."
-				+ "\nBe warned, though, this is a warzone. Follow me!\" "
-				+ "\nKENDALL opens the door of the training room and steps outside. You follow him. There are birds chirping and the cool wind blows. "
-				+ "\nThere are bombs exploding in the distance and you hear the screaming of dying citizens.");
-		System.out.println("\"We have a couple of different things we can do,\" KENDALL tells you. "
-				+ "\n\"We can go heal warriors in battle, or we can go on the offensive and battle alongside the warriors. What do you say?\""
+		System.out.println("KENDALL smiles proudly at you. ");
+		entertoCont();
+		System.out.println("\"You're doing incredibly well at this training, " + username + "! I think you are ready to go out into the real world.");
+		entertoCont();
+		System.out.println("Be warned, though, this is a warzone. Follow me!\" ");
+		entertoCont();
+		System.out.println("KENDALL opens the door of the training room and steps outside. You follow him. There are birds chirping and the cool wind blows. ");
+		entertoCont();
+		System.out.println("There are bombs exploding in the distance and you hear the screaming of dying citizens.");
+		entertoCont();
+		System.out.println("\"We have a couple of different things we can do,\" KENDALL tells you. ");
+		entertoCont();
+		System.out.println("\"We can go heal warriors in battle, or we can go on the offensive and battle alongside the warriors. What do you say?\""
 				+ "\nChoose a response for KENDALL: "
 				+ "\n(A) I want to heal warriors. "
 				+ "\n(B) I want to go on the offensive. ");
 		String dialogue2 = input.nextLine(); 
 		if (dialogue2.equalsIgnoreCase("a")) {
-			System.out.println("\"I want to heal our warriors. Being on the front lines isn't my thing,\" you say. "
-					+ "\n\"Fair enough. It's not fun for me, either. Let's go!\" KENDALL says."
-					+ "\nKENDALL starts heading north, and you follow. The sounds of the bombs are getting louder with each passing hour."
-					+ "\nAfter about three hours of walking, you and KENDALL approach a large, wartorn castle. "
-					+ "\n\"That used to be the home of our queen, but the INFERNON KING publicly executed her a few days ago,\" KENDALL says, point at the castle."
-					+ "\n\"I've heard rumors that her young son still lives. If that's true, then he is who we fight for.\""
-					+ "\n\"Let's hurry and get to the infirmary,\" KENDALL says. He runs inside the castle, ignoring the loud bombs from the neary battlefield. "
-					+ "\nThe infirmary is upstairs and the left. There are soldiers in various states of disrepair."
-					+ "\n\"Find someone and help them!\" a magician orders you.\n"
-					+ "\nYou see a soldier with a broken leg lying on the floor by the wall, moaning in pain. "
+			System.out.println("\"I want to heal our warriors. Being on the front lines isn't my thing,\" you say. ");
+			entertoCont();
+			System.out.println("\"Fair enough. It's not fun for me, either. Let's go!\" KENDALL says.");
+			entertoCont();
+			System.out.println("KENDALL starts heading north, and you follow. The sounds of the bombs are getting louder with each passing hour.");
+			entertoCont();
+			System.out.println("After about three hours of walking, you and KENDALL approach a large, wartorn castle. ");
+			entertoCont();
+			System.out.println("\"That used to be the home of our queen, but the INFERNON KING publicly executed her a few days ago,\" KENDALL says, point at the castle."); 
+			entertoCont();
+			System.out.println("\"I've heard rumors that her young son still lives. If that's true, then he is who we fight for.\"");
+			entertoCont();
+			System.out.println("\"Let's hurry and get to the infirmary,\" KENDALL says. He runs inside the castle, ignoring the loud bombs from the neary battlefield. ");
+			entertoCont();
+			System.out.println("The infirmary is upstairs and the left. There are soldiers in various states of disrepair.");
+			entertoCont();
+			System.out.println("\"Find someone and help them!\" a magician orders you.\n");
+			entertoCont();
+			System.out.println("You see a soldier with a broken leg lying on the floor by the wall, moaning in pain. \n"
 					+ "[Press A to approach the wounded soldier]"); 
 			String approach = input.nextLine(); 
 
 			if (approach.equalsIgnoreCase("a") ){
-				System.out.println("You rush over to the soldier who has broken her leg. "
-						+ "\n\"Ohhh it hurts,\" she moans."
+				System.out.println("You rush over to the soldier who has broken her leg. ");
+				entertoCont();
+				System.out.println("\"Ohhh it hurts,\" she moans."
 						+ "\n[Press X to heal the soldier]");
 				String healing2 = input.nextLine();
 
