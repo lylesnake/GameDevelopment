@@ -21,8 +21,6 @@ import java.awt.*;
 import java.awt.event.*;
 //Jeremy adding code to do pop up boxes. Start
 
-
-
 public class ActualGame {
 	
 	
