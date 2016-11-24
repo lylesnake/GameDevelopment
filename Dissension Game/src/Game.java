@@ -17,7 +17,11 @@ public class Game {
 		Jordan assassin = new Jordan(); 
 		Kendall mage = new Kendall(); 
 		Tayler warrior = new Tayler(); 
-
+		
+		
+		//I put the actual game play in the player1 class. 
+		//That's the only way it worked. 
+		// --Lyle 
 		if (player1.type.equalsIgnoreCase("a")) {
 			player1.customMethodAssassin(); 
 		}
