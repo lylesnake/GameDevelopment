@@ -12,7 +12,7 @@ public class Game {
 		player1.WhatType();
 		Jordan assassin = new Jordan(); 
 		Kendall mage = new Kendall(); 
-		Tayler warrior = new Taylor(); 
+		Tayler warrior = new Tayler(); 
 	
 	
 	
